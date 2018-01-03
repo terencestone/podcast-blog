@@ -11,13 +11,19 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <div className='nav-bar'>
+            <a className='nav-link' href='/'>Blog</a>
+            <a className='nav-link' href='/'>Podcast</a>
+            <a className='nav-link' href='/'>About</a>
+          </div>
         </header>
-        <Switch>
-          <Route exact path='/' component={BlogHome} {...this.props} />
-          <Route path="/p/:page" component={BlogHome} {...this.props} />
-          <Route path="/post/:slug" component={BlogPost} {...this.props} />
-        </Switch>
+        <div className='main-content'>
+          <Switch>
+            <Route exact path='/' component={BlogHome} {...this.props} />
+            <Route path="/p/:page" component={BlogHome} {...this.props} />
+            <Route path="/post/:slug" component={BlogPost} {...this.props} />
+          </Switch>
+        </div>
       </div>
     );
   }

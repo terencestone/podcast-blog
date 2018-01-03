@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 import { butter } from '../Constants'
 
 class BlogHome extends Component {
@@ -39,12 +39,16 @@ class BlogHome extends Component {
     if (this.state.loaded) {
       const { next_page, previous_page } = this.state.resp.meta;
 
+      console.log(this.state.resp)
       return (
-        <div>
+        <div className='blog-feed'>
           {this.state.resp.data.map((post) => {
             return (
-              <div key={post.slug}>
-                <Link to={`/post/${post.slug}`}>{post.title}</Link>
+              <div className='post-preview' key={post.slug}>
+                <img onClick={() => this.props.history.push(`/post/${post.slug}`)} className='post-image' src={post.featured_image} />
+                <Link className='post-link' to={`/post/${post.slug}`}>
+                  {post.title}
+                </Link>
               </div>
             )
           })}
@@ -68,4 +72,4 @@ class BlogHome extends Component {
   }
 }
 
-export default BlogHome;
+export default withRouter(BlogHome);

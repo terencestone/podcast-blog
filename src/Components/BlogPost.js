@@ -28,7 +28,7 @@ class BlogPost extends Component {
       const post = this.state.post;
 
       return (
-        <div>
+        <div className='post-container'>
           <Helmet>
             <title>{post.seo_title}</title>
             <meta name="description" content={post.meta_description} />
@@ -36,6 +36,8 @@ class BlogPost extends Component {
           </Helmet>
 
           <h1>{post.title}</h1>
+          <p>By {post.author.first_name} {post.author.last_name}</p>
+          <img src={post.featured_image} width='100%' height='100%'/>
           <div dangerouslySetInnerHTML={{__html: post.body}} />
         </div>
       );
