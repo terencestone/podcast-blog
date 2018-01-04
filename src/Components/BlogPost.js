@@ -43,9 +43,7 @@ class BlogPost extends Component {
       );
     } else {
       return (
-        <div>
-          Loading...
-        </div>
+        <div style={{height: window.innerHeight}} />
       );
     }
   }

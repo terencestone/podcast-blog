@@ -7,8 +7,10 @@
     "buttercms": "^1.1.0",
     "node-sass-chokidar": "0.0.3",
     "react": "^16.2.0",
+    "react-css-transition": "^0.7.4",
     "react-dom": "^16.2.0",
     "react-helmet": "^5.2.0",
+    "react-icons": "^2.2.7",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17",
     "reactstrap": "^5.0.0-alpha.4"
