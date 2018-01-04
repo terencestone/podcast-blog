@@ -37,7 +37,7 @@ class BlogPost extends Component {
 
           <h1>{post.title}</h1>
           <p>By {post.author.first_name} {post.author.last_name}</p>
-          <img src={post.featured_image} width='100%' height='100%'/>
+          <img src={post.featured_image} alt='featured' width='100%' height='100%'/>
           <div dangerouslySetInnerHTML={{__html: post.body}} />
         </div>
       );
