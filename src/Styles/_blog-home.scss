@@ -4,62 +4,61 @@
     margin-top: 50px;
 
     .circle-image-container {
+      display: inline-block;
+      position: relative;
+
+      .arrow {
+        position: absolute;
+        top: 85px;
+        width: 80px;
+        height: 80px;
+        color: #cdd1d3;
+        cursor: pointer;
+
+        &:hover {
+            color: #24a385;
+        }
+
+        &.lft {
+            left: -136px
+        }
+
+        &.rt {
+            right: -136px
+        }
+      }
+
+      .circle-container {
+        width: 220px;
+        height: 220px;
         display: inline-block;
+        margin: 0 30px 80px;
+        border-radius: 130px;
         position: relative;
+        cursor: pointer;
 
-        .arrow {
-            position: absolute;
-            top: 85px;
-            width: 80px;
-            height: 80px;
-            color: #cdd1d3;
-            cursor: pointer;
-
-            &:hover {
-                color: #24a385;
-            }
-
-            &.lft {
-                left: -136px
-            }
-
-            &.rt {
-                right: -136px
-            }
-
-        }
-
-        .circle-container {
-            width: 260px;
-            height: 260px;
-            display: inline-block;
-            margin: 0 43px 80px;
+        .circle-post {
             border-radius: 130px;
-            position: relative;
-            cursor: pointer;
-
-            .circle-post {
-                border-radius: 130px;
-                width: 260px;
-                height: 260px;
-            }
-
-            .title {
-                font-size: 14px;
-                position: absolute;
-                left: 120px;
-                top: -66px;
-            }
-            .title-char {
-                font: 26px Inconsolata, MonoSpace;
-                height: 165px;
-                position: absolute;
-                width: 20px;
-                left: 0;
-                top: 0;
-                transform-origin: bottom center;
-            }
+            width: 220px;
+            height: 220px;
         }
+
+        .title {
+            font-size: 14px;
+            position: absolute;
+            left: 120px;
+            top: -66px;
+        }
+        .title-char {
+            font: 26px Inconsolata, MonoSpace;
+            height: 165px;
+            position: absolute;
+            width: 20px;
+            left: 0;
+            top: 0;
+            transform-origin: bottom center;
+        }
+      }
     }
   }
 

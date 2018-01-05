@@ -23,26 +23,6 @@ const homeStyles = {
     transformOrigin: "left right",
     boxShadow: '0px 0px 130px gold',
     borderRadius: 130
-  },
-  defaultTitle: {
-    opacity: 0,
-    transform: "scale(1.3, 1.3)",
-    transformOrigin: "left right",
-  },
-  onEnterTitle: {
-    transform: "scale(1.3, 1.3)",
-    opacity: transit(1, 500, "ease-in-out"),
-    zIndex: 99
-  },
-  onLeaveTitle: {
-    transform: "scale(1.3, 1.3)",
-    opacity: transit(0, 300, "ease-in-out"),
-    zIndex: 99
-  },
-  activeTitle: {
-    transform: "scale(1.3, 1.3)",
-    transformOrigin: "left right",
-    zIndex: 99
   }
 }
 
